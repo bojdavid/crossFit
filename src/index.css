@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Outfit:wght@100..900&family=Prata&family=Satisfy&family=Sofia&display=swap');
+
+@import "tailwindcss";
+
+@theme{
+  --main-bg: #131619;
+   --color-mint-500: oklch(0.72 0.11 178);
+   --text-color : #FFFFFF;
+   --font-heebo: "Heebo", sans-serif;
+}
+
+.joinUs_bg{
+  background-image: url("./assets/joinUs_BG.jpg");
+   background-size: contain;
+  background-repeat: no-repeat;
+}
+
+body{
+  background-color: #131619;
+}
