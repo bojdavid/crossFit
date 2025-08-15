@@ -21,13 +21,15 @@ function Logos() {
     ]
   return (
     <>
-        <div className='h-[494px] w-full bg-[#000000] relative z-50 flex justify-evenly items-center'>
+        <div className='h-[200px] md:h-[300px] lg:h-[494px] w-full bg-[#000000] relative z-50 flex justify-evenly items-center transition-all duration-300 ease-in-out'>
                 {image_info.map(image => {
-                    return <div className='flex flex-col items-end ' >
-                                    <img src={arrow} alt="" className='w-[81.55px] h-[81.55px] ' />
-                                    <div className='flex flex-col items-center'>
-                                        <img src={image.image} alt="" className='h-[130px]' />
-                                        <p className='text-[#FFFFFF] text-[16px] font-bold uppercase text-center mt-[32px]'>{image.name}</p>
+                    return <div className='flex flex-col w-[228.49px] ' >
+                                    <div className='flex justify-end'>
+                                        <img src={arrow} alt="" className=' w-[20px] sm:w-[40px] md:w-[50px] lg:w-[81.55px] h-[20px] sm:h-[30px] md:h-[50px] lg:h-[81.55px]  transition-all ease-in-out duration-300 ' />
+                                    </div>
+                                    <div className='flex flex-col items-start'>
+                                        <img src={image.image} alt="" className='h-[35px]  sm:h-[70px] md:h-[90px]  lg:h-[130px] transition-all ease-in-out duration-300 object-contain ' />
+                                        <p className='text-[#FFFFFF] text-[7px] sm:text-[15px] md:text-[16px] font-bold uppercase text-center mt-[15px] md:mt-[32px]'>{image.name}</p>
                                     </div>
                             </div>
                 })}

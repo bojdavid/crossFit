@@ -25,7 +25,7 @@ function PreFooter() {
           </header>
         </div>
         <div className='w-full h-[479px]  flex flex-col items-center  justify-center bg-gray-900 mt-[62px]'>
-            <h1 className='animate-pulse text-gray-500 text-bold text-[100px] '>
+            <h1 className='animate-pulse text-gray-500 text-bold text-[50px] md:text-[100px] '>
                 Carousel section
             </h1>
         </div>

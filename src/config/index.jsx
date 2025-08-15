@@ -1,73 +1,78 @@
 import arrow from "../assets/buttonArrow.png"
 
-export const infoText = (outlinedText, header, desc, buttonText) =>{
-       return (
+export const infoText = (outlinedText, header, desc, buttonText) => {
+    return (
         <>
-        <div className="relative">
-                            <div className='absolute -z-0 top-0 left-0  text-[112px]'>
-                                                <h1 className=' font-bold text-white/20 m-0 p-0 leading-none'>
-                                                    {outlinedText}
-                                                </h1>
-                            </div>
-                            <h2 className='text-[40px] font-bold uppercase z-10'>
-                                {header}
-                            </h2>
-                            <p className='w-[386.43px] font-light uppercase mt-[14px]'>
-                                {desc}
-                            </p>
-                            {
-                            buttonText?
-                            <div className="w-[192.97px]  mt-[37px]">
-                                {button_withArrow(buttonText)}
-                            </div>
-
-            
-                            : ""
-                            }
-        </div>
+            <div className="relative w-full">
+                <div className='absolute -z-0 top-0 left-0 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[112px] select-none'>
+                    <h1 className='font-bold text-white/20 m-0 p-0 leading-none whitespace-nowrap overflow-hidden'>
+                        {outlinedText}
+                    </h1>
+                </div>
+                <div className="relative z-10">
+                    <h2 className='text-xl sm:text-2xl lg:text-3xl xl:text-[40px] font-bold uppercase leading-tight mb-3 sm:mb-4'>
+                        {header}
+                    </h2>
+                    <p className='w-full max-w-[386px] font-light uppercase text-sm sm:text-base lg:text-lg leading-relaxed'>
+                        {desc}
+                    </p>
+                    {buttonText && (
+                        <div className="w-full max-w-[193px] mt-6 sm:mt-8 lg:mt-[37px]">
+                            {button_withArrow(buttonText)}
+                        </div>
+                    )}
+                </div>
+            </div>
         </>
-       ) 
-    }
+    )
+}
 
-export const headerText = (outlinedText, header, desc) =>{
-       return (
+export const headerText = (outlinedText, header, desc) => {
+    return (
         <>
-        <div className="relative">
-                            <div className='absolute -z-0 top-0 left-[25%]  text-[180px]'>
-                                                <h1 className=' font-bold text-white/20 m-0 p-0 leading-none'>
-                                                    {outlinedText}
-                                                </h1>
-                            </div>
-                            <div className='text-center'>
-                              <h2 className='text-[60px] font-bold uppercase z-10'>
-                                  {header}
-                              </h2>
-                              <p className=' font-[300] uppercase mx-auto text-[20px] '>
-                                  {desc}
-                              </p>
-                            </div>
-        </div>
+            <div className="relative w-full px-4 sm:px-6 lg:px-8">
+                <div className='absolute -z-0 top-0 left-1/2 transform -translate-x-1/2 text-6xl sm:text-8xl lg:text-9xl xl:text-[140px] 2xl:text-[180px] select-none'>
+                    <h1 className='font-bold text-white/20 m-0 p-0 leading-none whitespace-nowrap'>
+                        {outlinedText}
+                    </h1>
+                </div>
+                <div className='text-center relative z-10 pt-4 sm:pt-6 lg:pt-8'>
+                    <h2 className='text-2xl sm:text-3xl lg:text-4xl xl:text-5xl 2xl:text-[60px] font-bold uppercase leading-tight mb-3 sm:mb-4 lg:mb-6'>
+                        {header}
+                    </h2>
+                    <p className='font-light uppercase mx-auto text-sm sm:text-base lg:text-lg xl:text-[20px] max-w-2xl leading-relaxed'>
+                        {desc}
+                    </p>
+                </div>
+            </div>
         </>
-       ) 
-    }
+    )
+}
 
 export function Input_element({ label, styles }) {
-  return (
-    <label className="block">
-      {/*<div className="mb-2 text-xs font-semibold tracking-wide text-white/60">{label}</div> */}
-      <input className={` rounded-full border border-[#404040] bg-transparent px-5 h-[54px] text-[#C4C4C4] ${styles}`} placeholder={label} />
-      
-    </label>
-  );
+    return (
+        <label className={`${styles}`}>
+            <input 
+                className={`w-full rounded-full border border-[#404040] bg-transparent px-[25px] sm:px-5 h-12 sm:h-[54px] text-[16px] text-[#C4C4C4] placeholder-[#C4C4C4] focus:outline-none focus:border-white/40 transition-colors `} 
+                placeholder={label} 
+            />
+        </label>
+    );
 }
 
 export const button_withArrow = (text) => {
-    return <button className="h-[54px] border-1 border-white rounded-full w-full flex justify-between text-[13px]" >
-                <span className="w-full my-auto font-bold">
-                    {text}
-                </span>
-                <span className="w-60px rounded-full h-[54px]">
-                    <img src={arrow} alt="" className="w-[72px] " />
-                </span>
-            </button>
+    return (
+        <button className="h-12 sm:h-[54px] border border-white rounded-full flex items-center justify-between text-xs sm:text-[13px] hover:bg-white/5 transition-colors group ">
+            <span className="flex-1 text-center font-bold px-[31px] leading-none uppercase text-nowrap">
+                {text}
+            </span>
+            <span className="flex-shrink-0 w-12 sm:w-[60px] h-12 sm:h-[54px] flex items-center justify-center">
+                <img 
+                    src={arrow} 
+                    alt="" 
+                    className="w-12 sm:w-[72px] h-auto transition-transform group-hover:scale-110" 
+                />
+            </span>
+        </button>
+    )
 }
