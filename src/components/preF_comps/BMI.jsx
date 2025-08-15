@@ -1,10 +1,41 @@
 import React from 'react'
-import { infoText } from '../../config/index.jsx'
+
 import { Input_element } from '../../config/index.jsx';
 import { button_withArrow } from '../../config/index.jsx';
+import plus from "../../assets/plus.png"
+//import { infoText_Plus } from '../../config/index.jsx';
 
 function BMI() {
+
+    const infoText_Plus = (outlinedText, header, desc, buttonText) => {
+    return (
+        <>
+            <div className="relative w-full">
+                <div className='absolute -z-0 -left-3 -top-4 sm:-top-7 sm:-left-10 text-4xl sm:text-6xl lg:text-7xl xl:text-8xl 2xl:text-[112px] select-none'>
+                    <h1 className='font-bold text-outline  text-black m-0 p-0 leading-none whitespace-nowrap overflow-hidden'>
+                        {outlinedText}
+                    </h1>
+                </div>
+                <div className="relative z-10">
+                    <img src={plus} alt="plus sign" className='w-4 h-6 sm:w-5 sm:h-7 lg:w-[26px] lg:h-[40px] absolute -left-8 ' /> 
+                    <h2 className='text-xl sm:text-2xl lg:text-3xl xl:text-[40px] font-bold uppercase leading-tight mb-3 sm:mb-4 flex'>
+                        <span>{header}</span>
+                    </h2>
+                    <p className='w-full max-w-[386px] font-light uppercase text-sm sm:text-base lg:text-lg leading-relaxed'>
+                        {desc}
+                    </p>
+                    {buttonText && (
+                        <div className="w-full max-w-[193px] mt-6 sm:mt-8 lg:mt-[37px]">
+                            {button_withArrow(buttonText)}
+                        </div>
+                    )}
+                </div>
+            </div>
+        </>
+    )
+}
         const inputStyles = "w-full"
+        const BMI_style = {}
       const bmiData = [
                     { range: "Below 18.5", label: "Underweight" },
                     { range: "18.5 - 24.9", label: "Healthy" },
@@ -21,20 +52,10 @@ function BMI() {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center'>
                 {/* Left: Form Section */}
                 <section className="relative order-2 lg:order-1">
-                    <div className="absolute -left-2 -top-6 select-none text-6xl sm:text-8xl lg:text-[10rem] font-black text-white/5 hidden md:block">
-                    BMI
-                    </div>
-                    <div className="flex items-center gap-3 mb-4 lg:mb-6">
-                    <div className="grid h-6 w-6 sm:h-8 sm:w-8 place-items-center rounded-full border border-white/20 text-sm sm:text-base">
-                        +
-                    </div>
-                    <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight">
-                        INPUT YOUR BMI
-                    </h1>
-                    </div>
-                    <p className="max-w-md text-sm sm:text-base text-white/60 mb-6 lg:mb-8">
-                    Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicuri.
-                    </p>
+       
+                    {infoText_Plus("BMI","Input Your BMI","Duo graece ponderum ne, ei mel aliquando. Pro te tamquam nonumes, nam no nemore epicuri.")}                
+                    
+              
 
                     <div className="space-y-4 lg:space-y-6">
                     <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -44,14 +65,15 @@ function BMI() {
                         <Input_element label="Gender"       styles={inputStyles}/>
                     </div>
                     <Input_element label="Select an activity factor:"  styles={inputStyles}/>
-
-                    {button_withArrow("calculate")}
+                    <div className='mt-[26px]'>
+                        {button_withArrow("calculate")}
+                    </div>
                     </div>
                 </section>
 
                 {/* Right: Circular table */}
-                <section className="relative mx-auto flex aspect-square w-full max-w-[400px] sm:max-w-[480px] lg:max-w-[540px] items-center justify-center rounded-full bg-[#0B1013] ring-1 ring-white/10 order-1 lg:order-2">
-                    <div className="absolute inset-4 sm:inset-6 lg:inset-8 rounded-full bg-gradient-to-b from-white/5 to-transparent" />
+                <section className="relative mx-auto flex aspect-square w-full ] max-h-[400px] max-w-[400px] sm:max-h-[500px] sm:max-w-[500px] lg:max-w-[610px] lg:max-h-[610px] items-center justify-center rounded-full bg-[#000000] ring-1 ring-white/10 order-1 lg:order-2">
+                    <div className="absolute inset-4 sm:inset-6 lg:inset-8 rounded-full" />
                     <div className="relative w-[85%] sm:w-[82%]">
                     <div className="grid grid-cols-[1fr_auto_1fr] text-xs sm:text-sm gap-2">
                         <div className="pr-2 sm:pr-4 lg:pr-6 font-semibold tracking-wide text-white/70 text-center sm:text-left">BMI</div>

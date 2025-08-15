@@ -6,7 +6,12 @@
   --main-bg: #131619;
    --color-mint-500: oklch(0.72 0.11 178);
    --text-color : #FFFFFF;
-   --font-heebo: "Heebo", sans-serif;
+  }
+  
+  @layer base {
+    :root {
+    --font-heebo: "Heebo", sans-serif;
+  }
 }
 
 .joinUs_bg{
@@ -18,3 +23,17 @@
 body{
   background-color: #131619;
 }
+
+.text-outline_ {
+  text-shadow:
+    -1px -1px 0 #404040, /* top-left */
+     1px -1px 0 #404040, /* top-right */
+    -1px  1px 0 #404040, /* bottom-left */
+     1px  1px 0 #404040; /* bottom-right */
+}
+
+.text-outline{
+    color: transparent;                 /* remove fill */
+  -webkit-text-stroke: 2px #404040; 
+}
+
