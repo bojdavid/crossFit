@@ -15,7 +15,7 @@ function PreFooter() {
           )}
         </header>
       </div>
-      <div className="w-full  h-auto  flex flex-col items-center  justify-center mt-[22px]  sm:mt-[32px] md:mt-[42px]  lg:mt-[62px] overflow-hidden ">
+      <div className="w-full  h-auto  flex flex-col items-center  justify-center mt-[22px]  sm:mt-[32px] md:mt-[42px]  lg:mt-[62px] overflow-hidden animate-on-scroll ">
         {/*
             
               <h1 className='animate-pulse text-gray-500 text-bold text-[50px] md:text-[100px] '>
