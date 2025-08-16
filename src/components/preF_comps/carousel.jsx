@@ -7,6 +7,8 @@ import img2 from "../../assets/carousel2.jpg";
 import img3 from "../../assets/carousel3.jpg";
 import img4 from "../../assets/carousel4.jpg";
 
+//New
+
 const Carousel = () => {
   const images = [
     { key: 1, img: img1 },
