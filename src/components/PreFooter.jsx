@@ -1,5 +1,5 @@
 import React from "react";
-import BMI from "./preF_comps/bmi";
+import BMI from "./preF_comps/BMI.jsx";
 import { headerText } from "../config/index.jsx";
 import Carousel from "./preF_comps/Carousel.jsx";
 
