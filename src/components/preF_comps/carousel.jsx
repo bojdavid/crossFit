@@ -27,8 +27,6 @@ const Carousel = () => {
     },
   });
 
-  const sliderStyles = "";
-
   return (
     <div ref={sliderRef} className="keen-slider">
       {images.map((image) => {
