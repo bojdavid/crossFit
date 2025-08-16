@@ -1,7 +1,6 @@
-import React from "react";
 import BMI from "./preF_comps/BMI.jsx";
 import { headerText } from "../config/index.jsx";
-//import Carousel from "./preF_comps/Carousel.jsx";
+import Carousel from "./preF_comps/carousel.jsx";
 
 function PreFooter() {
   return (
@@ -21,8 +20,8 @@ function PreFooter() {
               <h1 className='animate-pulse text-gray-500 text-bold text-[50px] md:text-[100px] '>
                   Carousel section
               </h1>
-               <Carousel />
-            */}
+              */}
+        <Carousel />
       </div>
       <div className="w-full mx-auto ">
         <BMI />
