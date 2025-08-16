@@ -31,8 +31,10 @@ const Carousel = () => {
     <div ref={sliderRef} className="keen-slider">
       {images.map((image) => {
         return (
-          <div className={`keen-slider__slide number-slide${image.key}`}>
-            <div className="w-fit bg-yellow-500 h-[150px] sm:h-[250px] md:h-[379px] lg:h-[479px]">
+          <div
+            className={`keen-slider__slide number-slide${image.key} bg-yellow-500 animate-on-scroll `}
+          >
+            <div className="w-fit bg-yellow-500 h-[150px] sm:h-[250px] md:h-[379px] lg:h-[479px] ">
               <img src={image.img} alt="" className="h-full w-full" />
             </div>
           </div>

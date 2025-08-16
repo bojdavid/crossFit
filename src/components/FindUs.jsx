@@ -11,7 +11,7 @@ function FindUs() {
     <div className="text-[#ffffff] w-full bg-[#000000] mt-12 sm:mt-20 lg:mt-[150px]">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-0 items-center min-h-[600px]">
         {/* Map Section */}
-        <div className="relative w-full h-full order-1 lg:order-1">
+        <div className="relative w-full h-full order-1 lg:order-1 animate-on-scroll">
           <div className="w-full h-[300px] sm:h-[400px] lg:h-[600px] overflow-hidden">
             <img
               src={map}
@@ -22,7 +22,7 @@ function FindUs() {
         </div>
 
         {/* Content Section */}
-        <div className="flex items-center justify-center py-8 lg:py-0 order-2 lg:order-2 px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center justify-center py-8 lg:py-0 order-2 lg:order-2 px-4 sm:px-6 lg:px-8 animate-on-scroll">
           <div className="w-full max-w-lg">
             {infoText_Plus(
               "Look",
